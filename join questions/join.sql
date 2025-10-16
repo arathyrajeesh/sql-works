@@ -36,6 +36,10 @@ SELECT A.name AS Employee1, B.name AS Employee2,D.dept_name AS Department
 FROM Employees A INNER JOIN Employees B ON A.dept_id = B.dept_id AND A.emp_id < B.emp_id 
 INNER JOIN Departments D ON A.dept_id = D.dept_id;
 
+#JOIN with WHERE clause
+SELECT E.name AS EmployeeName,D.dept_name AS DepartmentName
+FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id
+WHERE D.dept_name = 'HR';
 
 
 select * from Employees;
