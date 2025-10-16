@@ -20,6 +20,15 @@ SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
 FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id;
 
 #LEFT JOIN
+SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
+FROM Employees E LEFT JOIN Departments D ON E.dept_id = D.dept_id;
+
+#RIGHT JOIN
+SELECT D.dept_name AS DepartmentName, E.name AS EmployeeName
+FROM Employees E RIGHT JOIN Departments D ON E.dept_id = D.dept_id;
+
+
+
 
 select * from Employees;
 select * from Departments;
