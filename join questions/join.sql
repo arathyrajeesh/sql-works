@@ -27,8 +27,8 @@ SELECT D.dept_name AS DepartmentName, E.name AS EmployeeName
 FROM Employees E RIGHT JOIN Departments D ON E.dept_id = D.dept_id;
 
 #CROSS JOIN
-SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
-FROM Employees E CROSS JOIN Departments D;
+SELECT * FROM Employees CROSS JOIN Departments;
+
 
 #SELF JOIN
 SELECT A.name AS Employee1, B.name AS Employee2,D.dept_name AS Department
@@ -53,6 +53,7 @@ FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id;
 SELECT D.dept_name AS DepartmentName, COUNT(E.emp_id) AS EmployeeCount
 FROM Departments D LEFT JOIN  Employees E ON D.dept_id = E.dept_id
 GROUP BY D.dept_name ORDER BY EmployeeCount DESC;
+
 
 #show all perosns each table
 select * from Employees;
