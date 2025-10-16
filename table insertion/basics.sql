@@ -29,5 +29,14 @@ select emp_name from Employees where join_date > '2021-01-01';
 select emp_name from Employees where dept_id = 2;
 select emp_name from Employees WHERE emp_name LIKE 'A%';
 
+#C. UPDATE & DELETE
+UPDATE Employees e JOIN Departments d ON e.dept_id = d.dept_id SET e.salary = e.salary * 1.10 
+WHERE d.dept_name = 'HR';
+
+UPDATE Employees SET dept_id = 3 WHERE emp_name = 'Bob';
+delete from Employees where join_date < '2020-01-01';
+delete from Employees where emp_id = 104;
+update Employees set salary = salary + 50000 where dept_id = 2;
+
 select * from Departments;
 select * from Employees;
