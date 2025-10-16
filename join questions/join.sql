@@ -41,6 +41,10 @@ SELECT E.name AS EmployeeName,D.dept_name AS DepartmentName
 FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id
 WHERE D.dept_name = 'HR';
 
+#JOIN and ORDER BY
+SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
+FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id ORDER BY D.dept_name ASC;
+
 
 select * from Employees;
 select * from Departments;
