@@ -45,6 +45,15 @@ WHERE D.dept_name = 'HR';
 SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
 FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id ORDER BY D.dept_name ASC;
 
+#JOIN with alias
+SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
+FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id; 
+
+
+#JOIN with GROUP BY
+SELECT D.dept_name AS DepartmentName, COUNT(E.emp_id) AS EmployeeCount
+FROM Departments D LEFT JOIN  Employees E ON D.dept_id = E.dept_id
+GROUP BY D.dept_name ORDER BY EmployeeCount DESC;
 
 select * from Employees;
 select * from Departments;
