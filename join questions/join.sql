@@ -54,6 +54,15 @@ SELECT D.dept_name AS DepartmentName, COUNT(E.emp_id) AS EmployeeCount
 FROM Departments D LEFT JOIN  Employees E ON D.dept_id = E.dept_id
 GROUP BY D.dept_name ORDER BY EmployeeCount DESC;
 
+#FULL OUTER JOIN
+SELECT e.emp_id,e.name,d.dept_name 
+FROM Employees e
+LEFT JOIN Departments d ON e.dept_id = d.dept_id
+UNION 
+select e.emp_id,e.name,d.dept_name 
+from Employees e
+RIGHT JOIN Departments d ON e.dept_id = d.dept_id;
+
 
 #show all perosns each table
 select * from Employees;
