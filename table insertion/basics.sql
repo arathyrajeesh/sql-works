@@ -24,6 +24,10 @@ INSERT INTO Employees (emp_id, emp_name, salary, dept_id, join_date) VALUES
 
 #B. SELECT & WHERE Clause
 select emp_name, salary from Employees;
+select emp_name from Employees where salary > 60000;
+select emp_name from Employees where join_date > '2021-01-01';
+select emp_name from Employees where dept_id = 2;
+select emp_name from Employees WHERE emp_name LIKE 'A%';
 
 select * from Departments;
 select * from Employees;
