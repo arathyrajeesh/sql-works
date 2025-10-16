@@ -1,0 +1,25 @@
+create database employee;
+use employee;
+
+CREATE TABLE Employees (
+    emp_id INTEGER PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    dept_id INTEGER  
+);
+INSERT INTO Employees (emp_id, name, dept_id) VALUES(1, 'Alice', 101),(2, 'Bob', 102),(3, 'Charlie', 103),(4, 'David', NULL),(5, 'Eva', 101);
+
+CREATE TABLE Departments (
+    dept_id INTEGER PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+INSERT INTO Departments (dept_id, dept_name) VALUES (101, 'HR'), (102, 'IT'), (103, 'Marketing'), (104, 'Finance');
+
+#innerjoin
+
+SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
+FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id;
+
+#LEFT JOIN
+
+select * from Employees;
+select * from Departments;
