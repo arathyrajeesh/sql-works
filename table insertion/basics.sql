@@ -38,5 +38,13 @@ delete from Employees where join_date < '2020-01-01';
 delete from Employees where emp_id = 104;
 update Employees set salary = salary + 50000 where dept_id = 2;
 
+#D. AGGREGATE FUNCTIONS
+SELECT SUM(salary) FROM Employees;
+SELECT dept_id, AVG(salary) AS average_salary FROM Employees GROUP BY dept_id;
+SELECT MAX(salary) FROM Employees;
+SELECT MIN(salary) FROM Employees WHERE dept_id = 2;
+SELECT dept_id, COUNT(emp_id) FROM Employees GROUP BY dept_id;
+
+
 select * from Departments;
 select * from Employees;
