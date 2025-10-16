@@ -14,8 +14,7 @@ CREATE TABLE Departments (
 );
 INSERT INTO Departments (dept_id, dept_name) VALUES (101, 'HR'), (102, 'IT'), (103, 'Marketing'), (104, 'Finance');
 
-#innerjoin
-
+#INNER JOIN
 SELECT E.name AS EmployeeName, D.dept_name AS DepartmentName
 FROM Employees E INNER JOIN Departments D ON E.dept_id = D.dept_id;
 
