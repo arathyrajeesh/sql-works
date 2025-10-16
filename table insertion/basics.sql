@@ -45,6 +45,19 @@ SELECT MAX(salary) FROM Employees;
 SELECT MIN(salary) FROM Employees WHERE dept_id = 2;
 SELECT dept_id, COUNT(emp_id) FROM Employees GROUP BY dept_id;
 
+#E. JOIN Queries
+SELECT E.emp_name, D.dept_name FROM Employees E JOIN Departments D ON E.dept_id = D.dept_id;
+SELECT D.dept_name, E.emp_name FROM Departments D LEFT JOIN Employees E ON D.dept_id = E.dept_id;
+SELECT E.emp_name, D.dept_name FROM Departments D RIGHT JOIN Employees E ON D.dept_id = E.dept_id;
+
+SELECT E.emp_name, D.dept_name FROM Employees E
+LEFT JOIN Departments D ON E.dept_id = D.dept_id
+UNION
+SELECT E.emp_name, D.dept_name FROM Employees E
+RIGHT JOIN Departments D ON E.dept_id = D.dept_id;
+
+SELECT D.dept_name FROM Departments D
+LEFT JOIN Employees E ON D.dept_id = E.dept_id WHERE E.emp_id IS NULL;
 
 select * from Departments;
 select * from Employees;
