@@ -22,6 +22,8 @@ INSERT INTO Employees (emp_id, emp_name, salary, dept_id, join_date) VALUES
 (104, 'David', 55000, 2, '2020-08-05'),
 (105, 'Eva', 90000, 3, '2023-02-25');
 
+#B. SELECT & WHERE Clause
+select emp_name, salary from Employees;
 
 select * from Departments;
 select * from Employees;
