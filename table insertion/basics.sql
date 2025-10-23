@@ -61,3 +61,13 @@ LEFT JOIN Employees E ON D.dept_id = E.dept_id WHERE E.emp_id IS NULL;
 
 select * from Departments;
 select * from Employees;
+
+#Subqueries
+
+SELECT * FROM Employees e WHERE salary > (SELECT AVG(salary) FROM Employees);
+
+
+SELECT emp_name,salary FROM Employees
+WHERE emp_id IN (SELECT emp_id FROM Employees
+                        GROUP BY emp_id
+                        HAVING max(salary));
