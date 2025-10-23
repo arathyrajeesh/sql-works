@@ -77,3 +77,10 @@ SELECT emp_id,emp_name,salary,dept_id FROM Employees
 WHERE
     dept_id IN ( SELECT dept_id FROM Departments WHERE dept_name IN ('IT', 'HR'));
     
+SELECT emp_name FROM Employees
+WHERE dept_id IN ( SELECT dept_id FROM Departments WHERE dept_name = 'Finance');
+
+SELECT D1.dept_name
+FROM Departments AS D1
+WHERE 60000 < ( SELECT MAX(E1.salary)FROM Employees AS E1
+WHERE E1.dept_id = D1.dept_id);
