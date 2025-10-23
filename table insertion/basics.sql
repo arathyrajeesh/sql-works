@@ -71,3 +71,9 @@ SELECT emp_name,salary FROM Employees
 WHERE emp_id IN (SELECT emp_id FROM Employees
                         GROUP BY emp_id
                         HAVING max(salary));
+
+
+SELECT emp_id,emp_name,salary,dept_id FROM Employees
+WHERE
+    dept_id IN ( SELECT dept_id FROM Departments WHERE dept_name IN ('IT', 'HR'));
+    
