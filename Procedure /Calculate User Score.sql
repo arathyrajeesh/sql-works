@@ -15,3 +15,4 @@ option_text VARCHAR(255),
 is_correct BOOLEAN
 );
 INSERT INTO options (question_id,option_text,is_correct) VALUES ('1','false',2), ('6','correct',3), ('4','false',1);
+select * from options;
