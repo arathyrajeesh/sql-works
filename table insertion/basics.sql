@@ -73,9 +73,8 @@ WHERE emp_id IN (SELECT emp_id FROM Employees
                         HAVING max(salary));
 
 
-SELECT emp_id,emp_name,salary,dept_id FROM Employees
-WHERE
-    dept_id IN ( SELECT dept_id FROM Departments WHERE dept_name IN ('IT', 'HR'));
+SELECT * FROM Employees
+WHERE dept_id IN( SELECT dept_id FROM Departments WHERE dept_name IN ('IT', 'HR'));
     
 SELECT emp_name FROM Employees
 WHERE dept_id IN ( SELECT dept_id FROM Departments WHERE dept_name = 'Finance');
