@@ -87,3 +87,9 @@ select * from Doctor where specialization like '%Cardio%';
 select * from Appointment where status = 'Scheduled';
 select * from Patient where city <> 'Chennai';
 
+#ORDER BY
+select * from Patient order by first_name asc;
+select * from Doctor order by specialization asc;
+select * from Room order by  price_per_day desc;
+select * from Appointment order by appointment_date asc;
+select * from Patient order by age asc;
