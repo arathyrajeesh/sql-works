@@ -100,3 +100,10 @@ select gender, COUNT(*) as total from Patient group by gender;
 select MAX(price_per_day) as highest_price from Room;
 select MIN(age) as youngest_age from Patient;
 select avg(price_per_day) as average_price from Room;
+
+#GROUP BY Queries
+SELECT specialization, COUNT(*) AS total_doctors FROM Doctor GROUP BY specialization;
+SELECT city, COUNT(*) AS total_patients FROM Patient GROUP BY city;
+SELECT status, COUNT(*) AS total_appointments FROM Appointment GROUP BY status;
+SELECT room_type, COUNT(*) AS total_rooms FROM Room GROUP BY room_type;
+SELECT department_name, COUNT(*) AS total_doctors FROM Department GROUP BY department_name;
