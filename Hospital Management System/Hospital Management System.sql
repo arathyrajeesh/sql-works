@@ -107,3 +107,19 @@ SELECT city, COUNT(*) AS total_patients FROM Patient GROUP BY city;
 SELECT status, COUNT(*) AS total_appointments FROM Appointment GROUP BY status;
 SELECT room_type, COUNT(*) AS total_rooms FROM Room GROUP BY room_type;
 SELECT department_name, COUNT(*) AS total_doctors FROM Department GROUP BY department_name;
+
+#JOIN QUERIES
+SELECT P.first_name AS patient_name,D.name AS doctor_name FROM Appointment A
+JOIN Patient P ON A.patient_id = P.patient_id JOIN Doctor D ON A.doctor_id = D.doctor_id;
+
+SELECT A.appointment_date,D.specialization FROM Appointment A
+JOIN Doctor D ON A.doctor_id = D.doctor_id;
+
+SELECT P.first_name AS patient_name,P.city,D.name AS doctor_name
+FROM Appointment A JOIN Patient P ON A.patient_id = P.patient_id JOIN Doctor D ON A.doctor_id = D.doctor_id;
+
+SELECT D.name AS doctor_name,Dept.department_name
+FROM Doctor D JOIN Department Dept ON D.doctor_id = Dept.department_id;
+
+SELECT CONCAT(P.first_name, ' ', P.last_name) AS patient_name, A.status FROM Appointment A 
+JOIN Patient P ON A.patient_id = P.patient_id;
