@@ -93,3 +93,10 @@ select * from Doctor order by specialization asc;
 select * from Room order by  price_per_day desc;
 select * from Appointment order by appointment_date asc;
 select * from Patient order by age asc;
+
+#Aggregate Functions
+select COUNT(*) as total_patients from Patient;
+select gender, COUNT(*) as total from Patient group by gender;
+select MAX(price_per_day) as highest_price from Room;
+select MIN(age) as youngest_age from Patient;
+select avg(price_per_day) as average_price from Room;
