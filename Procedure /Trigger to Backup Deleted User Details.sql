@@ -16,6 +16,6 @@ BEGIN
 END //
 
 DELIMITER ;
-select * from user;
-DELETE FROM user WHERE user_id = 5; 
+select * from deleted_users;
+DELETE FROM user WHERE user_id = 4; 
 

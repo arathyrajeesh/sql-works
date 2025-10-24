@@ -16,6 +16,7 @@ INSERT INTO user (username, email, password) VALUES
 ('Eva', 'eva@example.com', 'pass222');
 
 select * from user;
+
 DELIMITER //
 CREATE PROCEDURE ShowUsers()
 BEGIN
