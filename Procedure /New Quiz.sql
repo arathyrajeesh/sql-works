@@ -1,7 +1,15 @@
 use procedurework;
 
-CREATE TABLE quiz ( quiz_id INT AUTO_INCREMENT PRIMARY KEY,quiz_title VARCHAR(100),total_questions INT);
-INSERT INTO quiz (quiz_title,total_questions) VALUES ('python',10), ('django',3), ('java',8);
+CREATE TABLE quiz (
+    quiz_id INT AUTO_INCREMENT PRIMARY KEY,
+    quiz_title VARCHAR(100),
+    total_questions INT DEFAULT 0
+);
+
+INSERT INTO quiz (quiz_title, total_questions) VALUES
+('Python Basics', 3),
+('Database Fundamentals', 2),
+('Web Development', 3);
 
 DELIMITER //
 CREATE PROCEDURE AddQuiz(
@@ -17,3 +25,4 @@ DELIMITER ;
 
 CALL AddQuiz('SQL Basics Quiz', 10);
 select * from quiz;
+
