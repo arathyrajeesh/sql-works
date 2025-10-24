@@ -123,3 +123,22 @@ FROM Doctor D JOIN Department Dept ON D.doctor_id = Dept.department_id;
 
 SELECT CONCAT(P.first_name, ' ', P.last_name) AS patient_name, A.status FROM Appointment A 
 JOIN Patient P ON A.patient_id = P.patient_id;
+
+
+# Advanced JOIN 
+SELECT P.first_name AS patient_name,D.name AS doctor_name,A.appointment_date,A.status
+FROM Appointment A JOIN Patient P ON A.patient_id = P.patient_id
+JOIN Doctor D ON A.doctor_id = D.doctor_id WHERE A.status = 'Completed';
+
+SELECT Dept.department_name,D.name AS doctor_name
+FROM Department Dept JOIN Doctor D ON Dept.department_id = D.doctor_id;
+
+SELECT P.first_name AS patient_name,P.city,A.appointment_date,A.status
+FROM Appointment A JOIN Patient P ON A.patient_id = P.patient_id WHERE A.status = 'Cancelled';
+
+SELECT P.first_name AS patient_name,P.age,D.name AS doctor_name,A.appointment_date
+FROM Appointment A JOIN Patient P ON A.patient_id = P.patient_id
+JOIN Doctor D ON A.doctor_id = D.doctor_id WHERE P.age > 35;
+
+SELECT A.appointment_id,D.name AS doctor_name,D.phone AS doctor_phone
+FROM Appointment A JOIN Doctor D ON A.doctor_id = D.doctor_id;
