@@ -68,4 +68,14 @@ INSERT INTO Room VALUES
 (4, 'General Ward', 1500),
 (5, 'ICU', 7500);
 
-
+#Basic SELECT Queries 
+select * from Patient;
+select name from Doctor;
+select first_name from Patient where gender='Female';
+select first_name from Patient where city='Delhi';
+select patient_id, status from Appointment;
+select name,phone from Doctor;
+select * from Patient where age > 30;
+select appointment_date from Appointment;
+select distinct room_type from Room;
+select department_name from Department;
