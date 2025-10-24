@@ -79,3 +79,11 @@ select * from Patient where age > 30;
 select appointment_date from Appointment;
 select distinct room_type from Room;
 select department_name from Department;
+
+#WHERE & Logical Operators
+select * from Patient where gender = 'Male';
+select * from Patient where age between 25 and 50;
+select * from Doctor where specialization like '%Cardio%';
+select * from Appointment where status = 'Scheduled';
+select * from Patient where city <> 'Chennai';
+
