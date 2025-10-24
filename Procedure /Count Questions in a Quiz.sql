@@ -19,5 +19,5 @@ END //
 
 DELIMITER ;
 
- CALL CountQuestions(2);
+CALL CountQuestions(2);
 select * from questions;
